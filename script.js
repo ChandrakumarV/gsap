@@ -1,21 +1,38 @@
 gsap.registerPlugin(ScrollTrigger);
 
-gsap.fromTo(
-    '.box',
-    { duration: 1, x: 500, opacity: 0 },
+// ------ header
+
+// gsap.from('.header-content', {
+//     duration: 1,
+//     y: 100,
+//     stagger: true,
+// });
+
+gsap.from('.header-content', {
+    opacity: 1,
+    duration: 1,
+    y: -50,
+});
+
+gsap.to(
+    '.header-content',
+
     {
         scrollTrigger: {
-            trigger: '.box',
-            markers: true,
+            trigger: '.header-content',
             toggleActions: 'reset pause reverse none',
-            start: 'top 80%',
-            end: 'top 40%',
+            start: 'top 15%',
+            end: 'bottom 10%',
             scrub: 2,
-            pin: true,
         },
         smoothOrigin: true,
-        opacity: 1,
+        opacity: 0,
         duration: 1,
-        x: 1000,
     },
 );
+
+gsap.from('.box', {
+    opacity: 1,
+    duration: 1,
+    scale: 0.8,
+});

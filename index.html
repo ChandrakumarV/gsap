@@ -4,21 +4,132 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Document</title>
+        <link rel="stylesheet" href="style.css" />
     </head>
     <body>
-        <div class="box"></div>
+        <header>
+            <div class="header-content">
+                <h1>Unlock Possibilities <br />Empower Your Team</h1>
+                <p>
+                    An extension of your software development team, providing expertise and
+                    resources to elevate your projects.
+                </p>
+                <div class="header-btn-container">
+                    <button>Let's Talk</button>
+                    <button class="sec">Contact</button>
+                </div>
+            </div>
+        </header>
+        <section class="test-monial">
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+        </section>
 
         <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/gsap.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/ScrollTrigger.min.js"></script>
         <script src="script.js"></script>
         <style>
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+                font-family: sans-serif;
+            }
+
+            header {
+                height: 80vh;
+                background-image: radial-gradient(at 52% 0%, rgb(255, 230, 0) 0px, transparent 50%),
+                    radial-gradient(at 4% 7%, hsla(184, 0%, 100%, 1) 0px, transparent 50%);
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+            header div {
+                display: flex;
+                gap: 24px;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+            }
+            header .header-btn-container {
+                display: flex;
+                flex-direction: row;
+            }
+            header h1 {
+                font-family: QuiteMagical;
+                font-size: 80px;
+                font-weight: 100;
+                text-align: center;
+                color: rgb(22, 22, 22);
+            }
+            header p {
+                font-size: 20px;
+                max-width: 800px;
+                font-weight: 100;
+                text-align: center;
+                color: rgb(22, 22, 22);
+            }
+            header button {
+                padding: 12px 32px;
+                cursor: pointer;
+                border: none;
+                border-radius: 8px;
+                font-size: 18px;
+                background-color: rgb(255, 230, 0);
+            }
+            header button.sec {
+                padding: 12px 32px;
+                cursor: pointer;
+                border: none;
+                border-radius: 8px;
+                font-size: 18px;
+                /* border: 1px solid black; */
+                box-shadow: 0px 0px 0px 1px gray inset;
+                background-color: transparent;
+            }
+            header button :active {
+                background-color: rgb(255, 230, 0);
+            }
+            nav {
+                position: fixed;
+                z-index: 1000;
+                top: 40px;
+                left: 50%;
+                transform: translateX(-50%);
+                height: 50px;
+                width: 100%;
+                max-width: 1000px;
+                border-radius: 50px;
+                margin-inline: auto;
+                background-color: rgba(255, 255, 255, 0.158);
+                border: 1px solid rgb(184, 184, 184);
+                backdrop-filter: blur(20px);
+
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: 10px 20px;
+            }
+            nav > ul {
+                display: flex;
+                list-style: none;
+                gap: 24px 0;
+            }
+            section.test-monial {
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                gap: 24px;
+                margin-bottom: 1600px;
+            }
             .box {
-                margin-block: 100vh;
-                width: 300px;
-                border-radius: 24px;
-                height: 150px;
-                background-color: rgb(255, 255, 255);
-                border: 2px solid rgb(207, 207, 207);
+                width: 200px;
+                height: 80px;
+                border-radius: 16px;
+                border: 1px solid rgb(212, 212, 212);
+                background-color: rgb(241, 241, 241);
             }
         </style>
     </body>
